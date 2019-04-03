@@ -24,15 +24,15 @@ foreach ($lists as $list) {
     $list['number'];
 
     //how long is the array?
-   $numberLenght = count($lists);
-   //look if there is something in the array
-   if ($numberLenght > 0){
-       //Redirect pagina naar video
-       header("Location: http://localhost/magicBook/pages/". ($list['number']) . ".html");
-       die();
-   }
-   //doe anders niks
-   else{
-       header("Location: http://localhost/magicBook/index.php");
-   }
+    $numberLenght = count($lists);
+    //look if there is something in the array
+    if ($numberLenght > 0){
+        //Redirect pagina naar video
+        header("Location: http://localhost/magicBook/pages/". ($list['number']) . ".html");
+        die();
+    }
+    //doe anders niks
+    else{
+        echo "error!";
+    }
 }
