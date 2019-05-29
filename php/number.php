@@ -28,7 +28,7 @@ foreach ($lists as $list) {
     //look if there is something in the array
     if ($numberLenght > 0){
         //Redirect pagina naar video
-        header("Location: http://localhost/magicBook/pages/". ($list['number']) . ".html");
+        header("Location: http://localhost/magicBook/video/". ($list['number']) . ".html");
         die();
     }
     //doe anders niks
