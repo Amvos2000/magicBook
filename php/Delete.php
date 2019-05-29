@@ -16,6 +16,6 @@ if ($mysqli->query($query) === TRUE) {
 }
 
 //Redirect pagina naar video
-header("Location: http://localhost/magicBook/index.php");
+header("Location: http://localhost/magicBook/video.php");
 
 $mysqli->close();
