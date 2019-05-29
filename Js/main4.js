@@ -90,10 +90,11 @@ document.getElementById("myBtn").addEventListener("click", returnScore);
 function returnScore() {
     document.getElementById("check").innerHTML = "Your score is " + getScore() + "/" + tot;
 
-    let totalScore = getScore();
+   let totalScore = getScore();
 
     if (totalScore < 5){
         document.getElementById("check2").innerHTML = "You can do better!"
     } else {
         document.getElementById("check2").innerHTML = "Congratulations, good job!"
     }
+}
