@@ -1,3 +1,4 @@
+//add dropdown menubutton
 let menubtn = document.getElementsByClassName("menubutton")[0];
 menubtn.addEventListener("click", menuButton);
 
@@ -5,7 +6,8 @@ menubtn.addEventListener("click", menuButton);
 function menuButton(event){
     let dropdown = document.getElementById("dropdownbutton");
     dropdown.classList.toggle("show");
-
+//if menubutton is pressed show button
+//if menubutton is unpressed don't show button
     if (!event.target.matches('.menubutton')) {
         let dropdowns = document.getElementsByClassName("dropdown-content");
         for (let i = 0; i < dropdowns.length; i++) {
@@ -16,17 +18,18 @@ function menuButton(event){
         }
     }
 }
-
+//the answers of the questions
 let answers = ["A","C","B","A","D"];
 let tot = answers.length;
 
+//check answers
 function getCheckedValue(radio){
     let radios = document.getElementsByName(radio);
     for(let i=0; i<radios.length; i++) {
         if (radios[i].checked) return radios[i].value;
     }
 }
-
+//score function
 function getScore(){
     let score = 0;
     for (let i=0; i<answers.length; i++) {
@@ -87,6 +90,7 @@ addLiElement5('Vraag5', 'What religion is being practice here?');
 
 document.getElementById("myBtn").addEventListener("click", returnScore);
 
+//calculate total score
 function returnScore() {
     document.getElementById("check").innerHTML = "Your score is " + getScore() + "/" + tot;
 
